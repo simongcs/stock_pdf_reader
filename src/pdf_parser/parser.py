@@ -11,9 +11,8 @@ class PdfParser:
     new_pdf_files = set()
     stocks = set()
 
-    def __init__(self, pdf_path, csv_path):
+    def __init__(self, pdf_path):
         self.pdf_path = pdf_path
-        self.csv_path = csv_path
 
     def read_reports(self, db):
         # self.reports = reports_db.get_reports(db)
