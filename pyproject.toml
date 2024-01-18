@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "stock-pdf-reader"
+version = "0.1.0"
+description = ""
+authors = ["simongcs <12417560+simongcs@users.noreply.github.com>"]
+readme = "README.md"
+packages = [{include = "stock_pdf_reader"}]
+
+[tool.poetry.dependencies]
+python = "3.11.3"
+pandas = "^2.1.4"
+tabula-py = "^2.9.0"
+python-dotenv = "^1.0.0"
+sqlalchemy = "^2.0.25"
+
+
+[tool.poetry.group.dev.dependencies]
+autopep8 = "^2.0.4"
+black = "^23.12.1"
+pytest = "^7.4.4"
+pytest-cov = "^4.1.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
