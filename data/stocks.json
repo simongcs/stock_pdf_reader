@@ -1,0 +1,88 @@
+{
+  "stocks": [
+    {
+      "name": "Apple Inc",
+      "ticker": "AAPL"
+    },
+    {
+      "name": "Adobe Inc",
+      "ticker": "ADBE"
+    },
+    {
+      "name": "Amazon.com Inc",
+      "ticker": "AMZN"
+    },
+    {
+      "name": "Global X Robotics & Artificial Intelligence ETF",
+      "ticker": "BOTZ"
+    },
+    {
+      "name": "Berkshire Hathaway Inc",
+      "ticker": "BRK.B"
+    },
+    {
+      "name": "CRISPR Therapeutics AG",
+      "ticker": "CRSP"
+    },
+    {
+      "name": "iShares MSCI Emerging Markets ex China ETF",
+      "ticker": "EMXC"
+    },
+    {
+      "name": "iShares Biotechnology ETF",
+      "ticker": "IBB"
+    },
+    {
+      "name": "International Business Machines Corp",
+      "ticker": "IBM"
+    },
+    {
+      "name": "Johnson & Johnson",
+      "ticker": "JNJ"
+    },
+    {
+      "name": "Global X Lithium & Battery Tech ETF",
+      "ticker": "LIT"
+    },
+    {
+      "name": "Microsoft Corp",
+      "ticker": "MSFT"
+    },
+    {
+      "name": "NVIDIA Corp",
+      "ticker": "NVDA"
+    },
+    {
+      "name": "Schwab US Dividend Equity ETF",
+      "ticker": "SCHD"
+    },
+    {
+      "name": "VanEck Semiconductor ETF",
+      "ticker": "SMH"
+    },
+    {
+      "name": "Tesla Inc",
+      "ticker": "TSLA"
+    },
+    {
+      "name": "Vanguard Real Estate ETF",
+      "ticker": "VNQ"
+    },
+    {
+      "name": "Vanguard S&P 500 ETF",
+      "ticker": "VOO"
+    },
+    {
+      "name": "Vanguard Total Stock Market ETF",
+      "ticker": "VTI"
+    },
+    {
+      "name": "Vanguard Total International Stock ETF",
+      "ticker": "VXUS"
+    },
+    {
+      "name": "ARK 21Shares Bitcoin ETF",
+      "ticker": "ARKB"
+    }
+  ]
+}
