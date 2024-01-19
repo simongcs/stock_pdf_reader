@@ -13,10 +13,10 @@ class StockService:
         return session.query(Stock).all()
 
     def load_stocks_from_json(self):
-        with open(self.file_path, 'r') as file:
+        with open(self.file_path, "r") as file:
             data = json.load(file)
-            return [Stock(item['name'], item['ticker'])
-                    for item in data['stocks']]
+            return [Stock(item["name"], item["ticker"])
+                    for item in data["stocks"]]
 
     def add_stocks_to_db(self):
         stocks = self.load_stocks_from_json()
