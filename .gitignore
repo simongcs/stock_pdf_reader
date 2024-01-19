@@ -162,4 +162,4 @@ cython_debug/
 .vscode/
 
 
-src/db/data-stock.db
+**.db
