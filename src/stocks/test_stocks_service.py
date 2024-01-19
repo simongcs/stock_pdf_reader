@@ -59,4 +59,3 @@ def test_add_stocks_to_db(stock_service, mock_session, mock_database):
         mock_session.commit.assert_called_once()
         mock_session.close.assert_called_once()
         mock_database.get_session.assert_called_once()
-

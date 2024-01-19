@@ -60,8 +60,8 @@ class PdfParser:
                     row["Número de acciones"],
                     (row["Balance (USD)"] / row["Número de acciones"]),
                     next(
-                        (item.id for item in stocks if item.name ==
-                         row["Activo"]), None
+                        (item.id for item in stocks
+                         if item.name == row["Activo"]), None
                     ),
                 )
                 for _, row in df.iterrows()

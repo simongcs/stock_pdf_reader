@@ -12,7 +12,7 @@ class Database:
 
     def __new__(cls, db_path):
         with cls._lock:
-            if not hasattr(cls, 'instance'):
+            if not hasattr(cls, "instance"):
                 cls._instance = super(Database, cls).__new__(cls)
                 cls.engine = create_engine(db_path, echo=True)
                 cls.session = sessionmaker(bind=cls.engine)
