@@ -3,6 +3,7 @@ import pytest
 from src.db.database import Database
 from sqlalchemy.orm import Session
 
+
 @pytest.fixture
 def mock_database():
     db = Database("sqlite:///testdata.db")
