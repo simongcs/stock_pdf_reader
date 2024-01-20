@@ -24,8 +24,3 @@ class StockService:
         session.add_all(stocks)
         session.commit()
         session.close()
-
-    @classmethod
-    def get_stock_by_name(cls, db, name):
-        session = db.get_session()
-        return session.query(Stock).filter(Stock.name == name).first()
