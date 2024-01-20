@@ -29,11 +29,6 @@ def stock_service(mock_database):
     return StockService(mock_database, "/path")
 
 
-@pytest.fixture
-def mock_open_file():
-    return MagicMock(spec=open)
-
-
 def test_can_get_empty_stocks(stock_service):
     stocks = stock_service.get_stocks()
     assert len(stocks) == 0
