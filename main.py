@@ -25,6 +25,7 @@ stocks: list[Stock] = stock_service.get_stocks()
 report.set_stocks(stocks)
 report.get_unique_report_dates(db)
 report.read_pdf_files()
-report.process_files(db, stocks)
+reports = report.get_reports_from_files()
+report.save_reports(db, reports)
 
 print("Tabla guardada como CSV ")
