@@ -23,7 +23,7 @@ stock_service.add_stocks_to_db()
 stocks: list[Stock] = stock_service.get_stocks()
 
 report.set_stocks(stocks)
-report.read_reports(db)
+report.get_unique_report_dates(db)
 report.read_pdf_files()
 report.process_files(db, stocks)
 
