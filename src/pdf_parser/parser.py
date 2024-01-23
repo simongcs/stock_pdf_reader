@@ -10,19 +10,20 @@ class PdfParser:
     reports = set()
     new_pdf_files = set()
     stocks = set()
+    report_dates = set()
 
     def __init__(self, pdf_path):
         self.pdf_path = pdf_path
 
-    def read_reports(self, db):
-        # self.reports = reports_db.get_reports(db)
-        session = db.get_session()
-        reports = session.query(Report).filter(Report.stock_id == 1).all()
-        self.reports = reports
-        session.close()
-
     def set_stocks(self, stocks):
         self.stocks = stocks
+
+    def get_unique_report_dates(self, db):
+        session = db.get_session()
+        dates = session.query(Report.date).distinct()
+        session.close()
+        print("dates:", dates)
+        self.report_dates = dates
 
     def pdf_to_df(self, pdf_path) -> DataFrame:
         tables = read_pdf(pdf_path, pages="all", multiple_tables=False)
@@ -44,7 +45,7 @@ class PdfParser:
             if file.endswith(".pdf")
         }
         self.new_pdf_files = all_pdf_files - set(
-            [x.date + ".pdf" for x in self.reports]
+            [x.date + ".pdf" for x in self.report_dates]
         )
 
     def process_files(self, db, stocks: list[Stock]):
