@@ -4,7 +4,7 @@ version = "0.1.0"
 description = ""
 authors = ["simongcs <12417560+simongcs@users.noreply.github.com>"]
 readme = "README.md"
-packages = [{include = "stock_pdf_reader"}]
+packages = [{include = "src"}]
 
 [tool.poetry.dependencies]
 python = "3.11.3"
@@ -25,5 +25,5 @@ requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
 
 
-[tool.pytest.ini_options]
-addopts = "--cov --cov-report term-missing"
+[tool.poetry.scripts]
+testcov = "tests.testcov:run"
