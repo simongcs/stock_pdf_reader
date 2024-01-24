@@ -8,9 +8,11 @@ class StockService:
         self.file_path = file_path
         self.db: Database = db
 
-    def get_stocks(self) -> list[Stock]:
+    def get_stocks_dict(self) -> dict[Stock]:
         session = self.db.get_session()
-        return session.query(Stock).all()
+        stocks = session.query(Stock).all()
+        session.close()
+        return {stock.name: stock for stock in stocks}
 
     def load_stocks_from_json(self):
         with open(self.file_path, "r") as file:
