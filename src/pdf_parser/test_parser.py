@@ -1,9 +1,7 @@
-from unittest.mock import MagicMock, create_autospec, patch
+from unittest.mock import patch
 import pandas as pd
 import pytest
-from src.db.database import Database
 from src.pdf_parser.parser import PdfParser
-from sqlalchemy.orm.session import Session
 from src.reports.report_model import Report
 
 MOCK_DATE_LIST = [("18-01-24",)]
@@ -24,23 +22,6 @@ MOCK_REPORT = Report(
     10,
     1,
 )
-
-
-@pytest.fixture()
-def mock_session():
-    session = create_autospec(Session)
-    session.query().distinct().all.return_value = MOCK_DATE_LIST
-    session.add_all = MagicMock()
-    session.commit = MagicMock()
-    session.close = MagicMock()
-    return session
-
-
-@pytest.fixture()
-def mock_database(mock_session):
-    database = MagicMock(spec=Database)
-    database.get_session.return_value = mock_session
-    return database
 
 
 @pytest.fixture
