@@ -38,7 +38,7 @@ class ReportService:
 
         return reports
 
-    def get_file_data(self, file):
+    def get_file_data(self, file) -> tuple[str, str]:
         pdf_path = os.path.join(self.parser.pdf_folder_path, file)
         filename = os.path.splitext(file)[0]
         pdf_date = filename[-8:]
