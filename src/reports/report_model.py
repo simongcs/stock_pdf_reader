@@ -19,16 +19,3 @@ class Report(Base):
         self.stock_holding = stock_holding
         self.stock_value = stock_value
         self.stock_id = stock_id
-
-    def __repr__(self):
-        return (
-            "<Report(date='%s', balance='%s', stock_holding='%s',\
-              stock_value='%s', stock_id='%s')>"
-            % (
-                self.date,
-                self.balance,
-                self.stock_holding,
-                self.stock_value,
-                self.stock_id,
-            )
-        )

@@ -106,3 +106,10 @@ class TestReportService:
         mock_database.get_session.assert_called_once()
         mock_database.get_session().add_all.assert_called_once()
         mock_database.get_session().commit.assert_called_once()
+
+    def test_get_file_data(self, report_service: ReportService):
+        file_data = report_service.get_file_data(MOCK_PDF_FILENAME_ONE)
+        assert file_data == (
+            "/path/{}".format(MOCK_PDF_FILENAME_ONE),
+            MOCK_PDF_FILENAME_ONE[:8],
+        )
